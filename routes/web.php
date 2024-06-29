@@ -6,8 +6,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\DashboardController@index')->middleware(['auth']);
 Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->middleware(['auth']);
 // Chart Dashboard
-Route::get('/chart', 'App\Http\Controllers\ChartController@chart')->middleware(['auth'])->middleware(['checkDivisi:programmer,owner,assistant']);
-Route::get('/cheatsheet', 'App\Http\Controllers\CheatsheetController@index')->middleware(['auth'])->middleware(['checkDivisi:programmer']);
+Route::get('/chart', 'App\Http\Controllers\ChartController@chart')->middleware(['auth'])->middleware(['checkDivisi:programmer,owner,assistant,kasir']);
+Route::get('/cheatsheet', 'App\Http\Controllers\CheatsheetController@index')->middleware(['auth'])->middleware(['checkDivisi:programmer,kasir']);
 //User Edit
 Route::get('/profile', 'App\Http\Controllers\ProfileController@index')->middleware(['auth']);
 Route::post('/profile/update', 'App\Http\Controllers\ProfileController@update')->middleware(['auth']);
@@ -106,8 +106,8 @@ Route::get('/kas/print2/{kas:NO_ID}', 'App\Http\Controllers\FTransaksi\KasContro
 Route::get('/bank', 'App\Http\Controllers\FTransaksi\BankController@index')->middleware(['auth'])->name('bank');
 Route::post('/bank/store', 'App\Http\Controllers\FTransaksi\BankController@store')->middleware(['auth'])->name('bank/store');
 Route::get('/bank/create', 'App\Http\Controllers\FTransaksi\BankController@create')->middleware(['auth'])->name('bank/create');
-Route::get('/bank/edit', 'App\Http\Controllers\FTransaksi\BankController@edit')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,pembelian'])->name('bank.edit');
-Route::post('/bank/update/{bank}', 'App\Http\Controllers\FTransaksi\BankController@update')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,pembelian'])->name('bank.update');
+Route::get('/bank/edit', 'App\Http\Controllers\FTransaksi\BankController@edit')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,kasir'])->name('bank.edit');
+Route::post('/bank/update/{bank}', 'App\Http\Controllers\FTransaksi\BankController@update')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,kasir'])->name('bank.update');
 Route::get('/get-bank', 'App\Http\Controllers\FTransaksi\BankController@getBank')->middleware(['auth'])->name('get-bank');
 Route::get('/rbank', 'App\Http\Controllers\FReport\RBankController@report')->middleware(['auth'])->name('rbank');
 Route::get('/get-bank-report', 'App\Http\Controllers\FReport\RBankController@getBankReport')->middleware(['auth'])->name('get-bank-report');
@@ -237,9 +237,9 @@ Route::post('/roperbkmbkk_1nomor/jasper-operbkmbkk_1nomor-report', 'App\Http\Con
 Route::get('/bg', 'App\Http\Controllers\OTransaksi\BgController@index')->middleware(['auth'])->name('bg');
 Route::post('/bg/store', 'App\Http\Controllers\OTransaksi\BgController@store')->middleware(['auth'])->name('bg/store');
 Route::get('/bg/create', 'App\Http\Controllers\OTransaksi\BgController@create')->middleware(['auth'])->name('bg/create');
-Route::get('/bg/edit/{bg}', 'App\Http\Controllers\OTransaksi\BgController@edit')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,pembelian'])->name('bg.edit');
-Route::get('/bg/edit', 'App\Http\Controllers\OTransaksi\BgController@edit')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,pembelian'])->name('bg.edit');
-Route::post('/bg/update/{bg}', 'App\Http\Controllers\OTransaksi\BgController@update')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,pembelian'])->name('bg.update');
+Route::get('/bg/edit/{bg}', 'App\Http\Controllers\OTransaksi\BgController@edit')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,kasir'])->name('bg.edit');
+Route::get('/bg/edit', 'App\Http\Controllers\OTransaksi\BgController@edit')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,kasir'])->name('bg.edit');
+Route::post('/bg/update/{bg}', 'App\Http\Controllers\OTransaksi\BgController@update')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,kasir'])->name('bg.update');
 Route::get('/get-bg', 'App\Http\Controllers\OTransaksi\BgController@getBg')->middleware(['auth'])->name('get-bg');
 Route::get('/bg/print/{bg:NO_ID}', 'App\Http\Controllers\OTransaksi\BgController@cetak')->middleware(['auth']);
 
@@ -249,8 +249,8 @@ Route::get('/bg/print/{bg:NO_ID}', 'App\Http\Controllers\OTransaksi\BgController
 Route::get('/slip', 'App\Http\Controllers\OTransaksi\SlipController@index')->middleware(['auth'])->name('slip');
 Route::post('/slip/store', 'App\Http\Controllers\OTransaksi\SlipController@store')->middleware(['auth'])->name('slip/store');
 Route::get('/slip/create', 'App\Http\Controllers\OTransaksi\SlipController@create')->middleware(['auth'])->name('slip/create');
-Route::get('/slip/edit/{slip}', 'App\Http\Controllers\OTransaksi\SlipController@edit')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,pembelian'])->name('slip.edit');
-Route::post('/slip/update/{slip}', 'App\Http\Controllers\OTransaksi\SlipController@update')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,pembelian'])->name('slip.update');
+Route::get('/slip/edit/{slip}', 'App\Http\Controllers\OTransaksi\SlipController@edit')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,kasir'])->name('slip.edit');
+Route::post('/slip/update/{slip}', 'App\Http\Controllers\OTransaksi\SlipController@update')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,kasir'])->name('slip.update');
 Route::get('/get-slip', 'App\Http\Controllers\OTransaksi\SlipController@getSlip')->middleware(['auth'])->name('get-slip');
 Route::get('/slip/print/{slip:NO_ID}', 'App\Http\Controllers\OTransaksi\SlipController@cetak')->middleware(['auth']);
 
@@ -260,8 +260,8 @@ Route::get('/wila', 'App\Http\Controllers\FMaster\WilaController@index')->middle
 Route::post('/wila/store', 'App\Http\Controllers\FMaster\WilaController@store')->middleware(['auth'])->name('wila/store');
 Route::get('/wila/browse', 'App\Http\Controllers\FMaster\WilaController@browse')->middleware(['auth'])->name('wila/browse');
 Route::get('/wila/create', 'App\Http\Controllers\FMaster\WilaController@create')->middleware(['auth'])->name('wila/create');
-Route::get('/wila/edit/{wila}', 'App\Http\Controllers\FMaster\WilaController@edit')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,pembelian'])->name('wila.edit');
-Route::post('/wila/update/{wila}', 'App\Http\Controllers\FMaster\WilaController@update')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,pembelian'])->name('wila.update');
+Route::get('/wila/edit/{wila}', 'App\Http\Controllers\FMaster\WilaController@edit')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,kasir'])->name('wila.edit');
+Route::post('/wila/update/{wila}', 'App\Http\Controllers\FMaster\WilaController@update')->middleware(['auth'])->middleware(['checkDivisi:programmer,gudang,assistant,kasir'])->name('wila.update');
 Route::get('/get-wila', 'App\Http\Controllers\FMaster\WilaController@getWila')->middleware(['auth'])->name('get-wila');
 Route::get('wila/cek', 'App\Http\Controllers\FMaster\WilaController@cek')->middleware(['auth']);
 

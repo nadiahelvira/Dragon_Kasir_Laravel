@@ -61,7 +61,7 @@
             <ul class="nav nav-treeview">
               <!-- IF check privilege & divisi -->
 			  
-              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('account')}}" class="nav-link">
                   <!-- <i class="nav-icon fas fa-adjust icon-green "></i> -->
@@ -84,7 +84,7 @@
             <ul class="nav nav-treeview">
               <!-- IF check privilege & divisi -->
 			  
-              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('wila')}}" class="nav-link">
                   <!-- <i class="nav-icon fa fa-map-pin icon-white "></i> -->
@@ -111,7 +111,7 @@
             <ul class="nav nav-treeview">
               <!-- IF check privilege & divisi -->
 			  
-              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <!-- <a href="{{url('kas')}}" class="nav-link"> -->
 				        <a href="{{url('kas?flagz=BKM')}}" class="nav-link">
@@ -121,7 +121,7 @@
               </li>
               @endif
 
-              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <!-- <a href="{{url('kask')}}" class="nav-link"> -->
 				        <a href="{{url('kas?flagz=BKK')}}" class="nav-link">
@@ -588,7 +588,7 @@
             <ul class="nav nav-treeview">
               <!-- IF check privilege & divisi -->
 			  
-              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('memo?flagz=M')}}" class="nav-link">
                   <!-- <i class="nav-icon fas fa-archive icon-white "></i> -->
@@ -617,7 +617,7 @@
             <ul class="nav nav-treeview">
               <!-- IF check privilege & divisi -->
 			  
-              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('lpb')}}" class="nav-link">
                   <!-- <i class="nav-icon fas fa-archive icon-white "></i> -->
@@ -631,7 +631,7 @@
 <!--------------------------------------------------------------------------------------->
 		<li class="nav-item">
 							
-				@if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+				@if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('bg')}}" class="nav-link">
                   <i class="nav-icon fa fa-check-square icon-grey "></i>
@@ -640,7 +640,7 @@
               </li>
               @endif
 			  
-			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('slip')}}" class="nav-link">
                   <i class="nav-icon fa fa-bug icon-orange "></i>
@@ -649,7 +649,7 @@
               </li>
               @endif
 
-			  <!-- @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			  <!-- @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('slip')}}" class="nav-link">
                   <i class="nav-icon fa fa-building icon-pink "></i>
@@ -673,7 +673,7 @@
             <!-- <ul class="nav nav-treeview"> -->
               <!-- IF check privilege & divisi -->
 			  
-              <!-- @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+              <!-- @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('pengajuan?flagz=1IJ')}}" class="nav-link"> -->
                   <!-- <i class="nav-icon fas fa-archive icon-white "></i> -->
@@ -682,7 +682,7 @@
               </li>
               @endif
 
-              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('pengajuan?flagz=2CV')}}" class="nav-link"> -->
                   <!-- <i class="nav-icon fas fa-archive icon-yellow "></i> -->
@@ -691,7 +691,7 @@
               </li>
               @endif
 			 
-			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('pengajuan?flagz=2CM')}}" class="nav-link"> -->
                   <!-- <i class="nav-icon fas fa-archive icon-yellow "></i> -->
@@ -700,7 +700,7 @@
               </li>
               @endif
 			  
-			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('pengajuan?flagz=2IJ')}}" class="nav-link"> -->
                   <!-- <i class="nav-icon fas fa-archive icon-yellow "></i> -->
@@ -709,7 +709,7 @@
               </li>
               @endif
 			  
-			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('pengajuan?flagz=3IJ')}}" class="nav-link"> -->
                   <!-- <i class="nav-icon fas fa-archive icon-yellow "></i> -->
@@ -718,7 +718,7 @@
               </li>
               @endif
 			  
-			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('pengajuan?flagz=2AB')}}" class="nav-link"> -->
                   <!-- <i class="nav-icon fas fa-archive icon-yellow "></i> -->
@@ -727,7 +727,7 @@
               </li>
               @endif
 			  
-			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('pengajuan?flagz=2PY')}}" class="nav-link"> -->
                   <!-- <i class="nav-icon fas fa-archive icon-yellow "></i> -->
@@ -754,7 +754,7 @@
             <ul class="nav nav-treeview">
               <!-- IF check privilege & divisi -->
 			  
-              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('raccount')}}" class="nav-link">
                   <!-- <i class="nav-icon fas  fa-shopping-basket icon-yellow "></i> -->
@@ -777,7 +777,7 @@
             <ul class="nav nav-treeview">
               <!-- IF check privilege & divisi -->
 
-              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('rkas')}}" class="nav-link">
                   <i class="nav-icon fa fa-laptop icon-green "></i>
@@ -786,7 +786,7 @@
               </li>
               @endif
 
-              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('rbank')}}" class="nav-link">
                   <i class="nav-icon fa fa-laptop icon-yellow"></i>
@@ -795,7 +795,7 @@
               </li>
               @endif
 			  
-			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('rmemo')}}" class="nav-link">
                   <i class="nav-icon fa fa-laptop icon-purple"></i>
@@ -804,7 +804,7 @@
               </li>
               @endif
 			  
-			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('rkasbankpertanggal')}}" class="nav-link">
                   <i class="nav-icon fa fa-laptop icon-red"></i>
@@ -813,7 +813,7 @@
               </li>
               @endif
 			  
-			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('rnera')}}" class="nav-link">
                   <i class="nav-icon fa fa-laptop icon-blue"></i>
@@ -822,7 +822,7 @@
               </li>
               @endif
 			  
-			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('rrl')}}" class="nav-link">
                   <i class="nav-icon fa fa-laptop icon-pink"></i>
@@ -831,7 +831,7 @@
               </li>
               @endif
 
-              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+              @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('rrltahun')}}" class="nav-link">
                   <i class="nav-icon fa fa-laptop icon-pink"></i>
@@ -840,7 +840,7 @@
               </li>
               @endif
 
-			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('rmutasi')}}" class="nav-link">
                   <i class="nav-icon fa fa-laptop icon-pink"></i>
@@ -849,7 +849,7 @@
               </li>
               @endif
 
-            @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+            @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
             <li class="nav-item">
               <a href="{{url('rratio')}}" class="nav-link">
                 <i class="nav-icon fa fa-laptop icon-pink"></i>
@@ -859,7 +859,7 @@
             @endif
 
 
-            @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+            @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
             <li class="nav-item">
               <a href="{{url('rbiaya')}}" class="nav-link">
                 <i class="nav-icon fa fa-laptop icon-pink"></i>
@@ -868,7 +868,7 @@
             </li>
             @endif
 
-            @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+            @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
             <li class="nav-item">
               <a href="{{url('rbuku')}}" class="nav-link">
                 <i class="nav-icon fa fa-laptop icon-pink"></i>
@@ -877,7 +877,7 @@
             </li>
             @endif
 
-            @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+            @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
             <li class="nav-item">
               <a href="{{url('rcashflow')}}" class="nav-link">
                 <i class="nav-icon fa fa-laptop icon-pink"></i>
@@ -886,7 +886,7 @@
             </li>
             @endif
 
-			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			  @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('rcekbuktilubang')}}" class="nav-link">
                   <i class="nav-icon fa fa-laptop icon-black"></i>
@@ -895,7 +895,7 @@
               </li>
               @endif
 
-        @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+        @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
             <li class="nav-item">
               <a href="{{url('ranalisa')}}" class="nav-link">
                 <i class="nav-icon fa fa-laptop icon-grey"></i>
@@ -904,7 +904,7 @@
             </li>
         @endif
 			
-        @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+        @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
             <li class="nav-item">
               <a href="{{url('rkaskeluarpendekpertanggal')}}" class="nav-link">
                 <i class="nav-icon fa fa-laptop icon-blue"></i>
@@ -934,7 +934,7 @@
         <ul class="nav nav-treeview">
           <!-- IF check privilege & divisi -->
     
-          @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+          @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
           <li class="nav-item">
             <a href="{{url('roperbbmbbk')}}" class="nav-link">
               <!-- <i class="nav-icon fas fa-archive icon-white "></i> -->
@@ -943,7 +943,7 @@
           </li>
           @endif
 		  
-          @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+          @if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
           <li class="nav-item">
             <a href="{{url('roperbkmbkk')}}" class="nav-link">
               <!-- <i class="nav-icon fas fa-archive icon-white "></i> -->
@@ -959,7 +959,7 @@
 <!--------------------------------------------------------------------------------------->
 
 		<li class="nav-item">
-			@if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			@if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
 			<li class="nav-item">
 			<a href="{{url('sup')}}" class="nav-link">
 				<i class="nav-icon fa fa-child icon-grey "></i>
@@ -969,7 +969,7 @@
 			@endif
 			
 			
-			@if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			@if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('rsaldobank')}}" class="nav-link">
                   <i class="nav-icon fa fa-laptop icon-blue"></i>
@@ -978,7 +978,7 @@
               </li>
               @endif
 
-			@if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			@if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('rsaldokas')}}" class="nav-link">
                   <i class="nav-icon fa fa-laptop icon-blue"></i>
@@ -987,7 +987,7 @@
               </li>
             @endif
 
-			@if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="pembelian") || (Auth::user()->divisi=="accounting") )             
+			@if ( (Auth::user()->divisi=="programmer") || (Auth::user()->divisi=="owner") || (Auth::user()->divisi=="assistant") || (Auth::user()->divisi=="kasir") || (Auth::user()->divisi=="accounting") )             
               <li class="nav-item">
                 <a href="{{url('rlihatpnpb')}}" class="nav-link">
                   <i class="nav-icon fa fa-laptop icon-blue"></i>
